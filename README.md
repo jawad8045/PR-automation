@@ -6,3 +6,4 @@ Observer test change.
 Second observer test.
 Third observer test.
 Fourth observer test.
+Failing-tests observer test.
