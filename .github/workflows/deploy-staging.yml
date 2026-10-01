@@ -1,0 +1,14 @@
+name: Deploy to Staging
+on:
+  push:
+    branches: [staging]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "tests pass"
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "pretend deploy"
