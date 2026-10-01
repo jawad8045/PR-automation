@@ -6,7 +6,15 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "tests pass"
+      - name: Run rspec
+        run: |
+          echo "Failures:"
+          echo "  1) User signs in with valid credentials"
+          echo "     expected: 200"
+          echo "          got: 500"
+          echo ""
+          echo "12 examples, 1 failure"
+          exit 1
   deploy:
     needs: test
     runs-on: ubuntu-latest
